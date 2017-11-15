@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
+import Footer from './Footer';
+import Header from './Header';
 
 class Layout extends Component {
-  render() {
-    return (
-      <div>          
-        <div>Header</div>
-            <div>Content</div>
-        <div>Footer</div>
-      </div>
-    );
-  }
+    upTitle(e){
+      const title = e.target.value
+      console.log("title:"+title)
+    }
+    render() {
+        return (
+            <div>          
+                <Header title ="HamBri"/>
+                <input type="text" onChange ={this.upTitle.bind(this)} />
+                <Footer />
+            </div>
+        );
+    }
 }
 
 export default Layout;
